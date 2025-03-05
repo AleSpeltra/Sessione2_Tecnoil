@@ -1,0 +1,204 @@
+Name: Model
+Id: g=6e3cca566a1128dc62983b452feff637
+Type: ModelCategoryFolder
+Children:
+- Name: NomeFile
+  Id: g=068094d193f8e0c5f78599691c3d833e
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "export.CSV"
+- Name: Save
+  Id: g=501368e0591fe85748299ffc51d4a865
+  Type: BaseDataVariableType
+  DataType: Boolean
+- Name: SaveTransitioned
+  Id: g=2020bb76dc73715916d7fa8360fd632a
+  Type: VariableTransitionEventDispatcher
+  Children:
+  - Name: Value
+    Id: g=48894f48ba6a509f5b73af4d138ae41f
+    Type: BaseVariableType
+    DataType: Double
+    Value: 1.0
+  - Name: Transition
+    Id: g=c2d661a4e8dea203eefa279ce8bca029
+    Type: BaseVariableType
+    DataType: VariableTransition
+  - Name: VariableNodePath
+    Id: g=194fb2b3866615ca698f0d2c10a8742b
+    Type: BaseVariableType
+    DataType: NodePath
+    Value: "../Save"
+  - Name: VariableTransitionEventHandler1
+    Id: g=ab14fd8b81bc063a547b752ac75c4c2b
+    Type: EventHandler
+    Children:
+    - Name: ListenEventType
+      Id: g=042f8a02e6baf67199f4a0460b36ad82
+      Type: PropertyType
+      DataType: NodeId
+      Value: "/Types/EventTypes/BaseEventType/VariableConditionEvent/VariableTransitionEvent"
+    - Name: MethodsToCall
+      Id: g=c4454eb7f11d7bbba45ff7a91ab7dd2d
+      Type: BaseObjectType
+      Children:
+      - Name: MethodContainer1
+        Id: g=73d153ca7278a58ddb47327cebf4e369
+        Type: BaseObjectType
+        Children:
+        - Name: ns=2;ObjectPointer
+          Id: g=9e908ab1fe1b65a903a0c9f45cacd96b
+          Type: NodePointer
+          DataType: NodeId
+          Children:
+          - Name: Kind
+            Id: g=36cf9dcf65c20179fbaf06473e013392
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType"
+          - Name: DynamicLink
+            Id: g=eb88d5e5027aae054c64fd98678cab2f
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../../../NetLogic/DataLoggerExporter@NodeId"
+            Children:
+            - Name: Mode
+              Id: g=859b2bc89a67c436b135aec2f5d623e3
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              Value: 2
+        - Name: ns=2;Method
+          Id: g=8166cd222337fefae39d69a4891d4e86
+          Type: BaseDataVariableType
+          DataType: String
+          Value: "Export"
+    - Name: EventArguments
+      Id: g=a963c8870ba33ca905f0941ed59d00fb
+      Type: VariableTransitionEvent
+      Children:
+      - Name: VariableNodeId
+        Id: g=ca7a51782113cdf46ef12568e177eb21
+        Type: BaseVariableType
+        DataType: NodeId
+      - Name: NewValue
+        Id: g=58a863dcbc2e919b0dd397d6f12fff83
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: OldValue
+        Id: g=d45c350d9c77bc43ec663811764a71d3
+        Type: BaseVariableType
+        DataType: BaseDataType
+      - Name: EventId
+        Id: g=9e30eb21bd2f7c3fd4a6f78428a44989
+        Type: PropertyType
+        DataType: ByteString
+      - Name: EventType
+        Id: g=efd21aac7299c55f4662422a045652dd
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceNode
+        Id: g=7f3a29b7c66642554c3f08ff3d050356
+        Type: PropertyType
+        DataType: NodeId
+      - Name: SourceName
+        Id: g=b73790bc80650823ace348fade867b96
+        Type: PropertyType
+        DataType: String
+      - Name: Time
+        Id: g=3ea5752774a98d432abae8dea80aaf14
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: ReceiveTime
+        Id: g=9293b7239be903b1bf7f1f86e1ffebcf
+        Type: PropertyType
+        DataType: UtcTime
+      - Name: Message
+        Id: g=605ff1e54660d381afa75531639906ba
+        Type: PropertyType
+        DataType: LocalizedText
+      - Name: Severity
+        Id: g=0afb16eb00e7e297360daeb18a76cc59
+        Type: PropertyType
+        DataType: UInt16
+- Name: CambioColore
+  Id: g=efc41d653ce74fca2d19ba1843e8bc54
+  Type: BaseDataVariableType
+  DataType: Int32
+- Name: RGBColor
+  Id: g=6ef627e788950e35f49f15c9a080ff83
+  Type: BaseDataVariableType
+  DataType: Color
+- File: VarRicetta/VarRicetta.yaml
+- Name: Temp
+  Id: g=3a6bc1dc069047fb670482dd8935397b
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 10
+  Children:
+  - Name: ns=0;EngineeringUnits
+    Id: g=7289d515d637910d306f996c6d178f54
+    Type: EUInformationType
+    DataType: EUInformation
+    DisplayName: {"NamespaceIndex":0,"TextId":"EngineeringUnitsDisplayName"}
+    Children:
+    - Name: UnitId
+      Id: g=9cdc181104ece7ef33eab80afbb3ff41
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 4408652
+    - Name: DisplayName
+      Id: g=d21565aedff15da4fd87b60cceb00b92
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Description
+      Id: g=a2c6e396795678f70ccaeefadd2251ea
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+- Name: AnalogVariable1
+  Id: g=37b0a3097dd64955ccb2f1ce65cff5f4
+  Type: AnalogItemType
+  DataType: Float
+  Value: 20.0
+  Children:
+  - Name: EURange
+    Id: g=9f2653297b40980a7583101b8f40e6e6
+    Type: RangeType
+    DataType: Range
+    Children:
+    - Name: Low
+      Id: g=e5c22e94988d754fb08dfd16982d65fa
+      Type: BaseDataVariableType
+      DataType: Double
+    - Name: High
+      Id: g=42dc94790a4c724ed3099943357308be
+      Type: BaseDataVariableType
+      DataType: Double
+      Value: 120.0
+  - Name: EngineeringUnits
+    Id: g=db7decc5789e2c17c484248a1607a618
+    Type: EUInformationType
+    DataType: EUInformation
+    Children:
+    - Name: UnitId
+      Id: g=d12168039d158090215cd4c5dff2feb0
+      Type: BaseDataVariableType
+      DataType: Int32
+      Value: 5066065
+    - Name: DisplayName
+      Id: g=987c2ff76bd7b99d8b6f7494c881f432
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+    - Name: Description
+      Id: g=fa70e72d782962e562066197597f0076
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+- Name: TestBox
+  Id: g=a9cbbb3073ae7d16848cac5bd636b1d1
+  Type: BaseDataVariableType
+  DataType: LocalizedText
+  Value: {"LocaleId":"it-IT","Text":"0"}
+- Name: VarOpcUA
+  Id: g=0dba9ba5e0c1e4be543de5078b999fc3
+  Type: BaseDataVariableType
+  DataType: Int32
+  Value: 30

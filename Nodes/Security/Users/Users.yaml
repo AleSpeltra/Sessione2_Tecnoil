@@ -1,0 +1,53 @@
+Name: Users
+Id: g=8cdfe95c558e909385d4fe7ddc9a2655
+Type: UsersCategoryFolder
+Children:
+- Name: User
+  Id: g=7b3d2d18629eb1d62ba6e98b89ab2326
+  Type: UserType
+  Children:
+  - Class: Reference
+    Type: HasGroup
+    Target: g=becefcbdf346e2ca6639663374ee6426
+- Name: Admin
+  Id: g=ef2ebc24a31e35fb2fcd6e03cc594e8d
+  Type: UserType
+  Children:
+  - Class: Reference
+    Type: HasGroup
+    Target: g=9e0be57e76dbbb6a857558965fd6d040
+  - Name: LocaleId
+    Id: g=8a9da7a542dafef9b788ae33b42decf9
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "it-IT"
+  - Name: Language
+    Id: g=bc7aea37a85f3493eb78434a3d647595
+    Type: BaseVariableType
+    DataType: LocaleId
+    ReferenceType: HasProperty
+    Value: "it-IT"
+- Name: Sviluppatore
+  Id: g=9acdbea3646204768439660b0412ca19
+  Type: UserType
+  Children:
+  - Class: Reference
+    Type: HasGroup
+    Target: g=366f6b0d2846964679cf2fe4f76cfc8a
+- Name: UtenteAsem
+  Id: g=2f24c7cea31db414dbbfec5c85a2e6c4
+  Supertype: UserType
+  Children:
+  - Name: TimeLogout
+    Id: g=747950ffeea5ffaf31bd23e03a72214d
+    Type: BaseDataVariableType
+    DataType: Duration
+- Name: UtenteAsem1
+  Id: g=6f594ed6a656799d70991ed936859115
+  Type: UtenteAsem
+  Children:
+  - Name: TimeLogout
+    Id: g=95e6cb0eb4aa52ff1b6a2dbd09a0c51f
+    Type: BaseDataVariableType
+    DataType: Duration
